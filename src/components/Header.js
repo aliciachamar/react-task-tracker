@@ -2,8 +2,8 @@ const Header = () => {
   return (
     <header>
       <h1>Task Tracker</h1>
-    </header>>
+    </header>
   )
 }
 
-export default Header
+export default Header;
