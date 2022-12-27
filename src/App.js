@@ -2,7 +2,9 @@ import Header from "./components/Header";
 import Tasks from "./components/Tasks";
 import { useState } from "react";
 
-function App() {
+function App () {
+
+  // Dummy data for tasks
   const [tasks, setTasks ] = useState([
     {
       id: 1,
@@ -24,10 +26,18 @@ function App() {
     }
   ]);
 
+  // Delete task
+  const deleteTask = (id) => {
+    console.log("delete ", id);
+  }
+
   return (
     <div className="container">
       <Header />
-      <Tasks tasks={tasks}/>
+      <Tasks 
+        tasks={tasks} 
+        onDelete={deleteTask}
+      />
     </div>
   );
 }
